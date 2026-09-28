@@ -409,7 +409,9 @@
   .doc:nth-child(3) { margin-top: 36px; }
   .doc { position: relative; outline-offset: 6px; }
   .doc-figure { position: relative; overflow: hidden; }
-  .doc-photo { aspect-ratio: 4 / 5; }
+  /* Не оставляем портреты скрытыми, если наблюдатель прокрутки не сработал. */
+  .doc-photo { display: block; width: 100%; min-height: 320px; aspect-ratio: 4 / 5; clip-path: none !important; }
+  .js .doc.reveal { opacity: 1; transform: none; }
   .doc-badge {
     position: absolute; z-index: 2; top: 16px; left: 16px;
     background: var(--milk); color: var(--deep);

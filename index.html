@@ -401,6 +401,8 @@
   .clinic-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: end; }
   .clinic-a { grid-column: 1 / 9; aspect-ratio: 16 / 11; }
   .clinic-b { grid-column: 10 / 13; aspect-ratio: 4 / 5; }
+  /* Фото клиники должны оставаться видимыми и без срабатывания scroll observer. */
+  .clinic .unveil { clip-path: none !important; }
 
   /* ═══════════ ВРАЧИ ═══════════ */
   .doctors-bg { background: var(--white); }

@@ -57,7 +57,8 @@
     --max: 1360px;
   }
 
-  html { scroll-behavior: smooth; scroll-padding-top: 88px; font-size: 16px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 120px; font-size: 16px; }
+  section[id] { scroll-margin-top: 120px; }
 
   body {
     font-family: var(--font-body);
@@ -343,6 +344,7 @@
   .js.is-loaded .hero-fade { opacity: 1; transform: none; }
   .js .unveil { clip-path: inset(100% 0 0 0); transition: clip-path 1.4s var(--ease-io) var(--d, 0s); }
   .js .unveil.visible, .js.is-loaded .hero .unveil { clip-path: inset(0 0 0 0); }
+  .js .ph.is-empty.unveil { clip-path: none; transition: none; }
 
   /* ═══════════ ПРЕИМУЩЕСТВА ═══════════ */
   .trust-strip { background: var(--white); padding: 44px var(--gutter); border-bottom: 1px solid var(--line); }
@@ -785,7 +787,7 @@
         <!-- ================= HERO IMAGE ================= -->
         <!-- REPLACE IMAGE: images/hero.jpg  (вертикальное фото, лучше 4:5, от 1200×1500) -->
         <div class="arch ph unveil" data-file="hero.jpg" data-parallax="0.06" style="--d:.2s; --ph-a:#EAE4D8; --ph-b:#CDC4B3;">
-          <div class="zoom"><img src="hero.jpg" alt="" fetchpriority="high" decoding="async" onerror="imgFail(this)"></div>
+          <div class="zoom"><img src="images/hero.jpg" alt="Интерьер стоматологии Дента-Сервис" fetchpriority="high" decoding="async" onerror="imgFail(this)"></div>
         </div>
 
         <div class="hero-quote hero-fade" style="--d:1.4s">
@@ -873,7 +875,7 @@
           </button>
           <div class="svc-body"><div class="svc-body-inner">
             <p class="svc-desc">Лечение кариеса, пульпита, периодонтита. Работаем с анестезией нового поколения — вы не почувствуете боли.</p>
-            <div class="ph svc-thumb" data-file="service-01.jpg"><div class="zoom"><img src="service-01.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+            <div class="ph svc-thumb" data-file="service-01.jpg"><div class="zoom"><img src="images/service-01.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
           </div></div>
         </li>
 
@@ -885,7 +887,7 @@
           </button>
           <div class="svc-body"><div class="svc-body-inner">
             <p class="svc-desc">Восстановление утраченных зубов с гарантией. Используем импланты ведущих европейских и российских производителей.</p>
-            <div class="ph svc-thumb" data-file="service-02.jpg"><div class="zoom"><img src="service-02.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+            <div class="ph svc-thumb" data-file="service-02.jpg"><div class="zoom"><img src="images/service-02.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
           </div></div>
         </li>
 
@@ -897,7 +899,7 @@
           </button>
           <div class="svc-body"><div class="svc-body-inner">
             <p class="svc-desc">Коронки, виниры, съёмные и несъёмные протезы. Индивидуальный подбор материала под ваш бюджет и эстетику.</p>
-            <div class="ph svc-thumb" data-file="service-03.jpg"><div class="zoom"><img src="service-03.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+            <div class="ph svc-thumb" data-file="service-03.jpg"><div class="zoom"><img src="images/service-03.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
           </div></div>
         </li>
 
@@ -909,7 +911,7 @@
           </button>
           <div class="svc-body"><div class="svc-body-inner">
             <p class="svc-desc">Простое и хирургическое удаление, в том числе зубов мудрости. Бережно, быстро, с минимальным дискомфортом.</p>
-            <div class="ph svc-thumb" data-file="service-04.jpg"><div class="zoom"><img src="service-04.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+            <div class="ph svc-thumb" data-file="service-04.jpg"><div class="zoom"><img src="images/service-04.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
           </div></div>
         </li>
 
@@ -921,7 +923,7 @@
           </button>
           <div class="svc-body"><div class="svc-body-inner">
             <p class="svc-desc">Отбеливание, виниры, реставрация. Восстановим форму и цвет зубов для естественной, уверенной улыбки.</p>
-            <div class="ph svc-thumb" data-file="service-05.jpg"><div class="zoom"><img src="service-05.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+            <div class="ph svc-thumb" data-file="service-05.jpg"><div class="zoom"><img src="images/service-05.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
           </div></div>
         </li>
 
@@ -933,7 +935,7 @@
           </button>
           <div class="svc-body"><div class="svc-body-inner">
             <p class="svc-desc">Ультразвуковое удаление камня, Air Flow полировка. Рекомендуем раз в полгода для здоровья дёсен.</p>
-            <div class="ph svc-thumb" data-file="service-06.jpg"><div class="zoom"><img src="service-06.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+            <div class="ph svc-thumb" data-file="service-06.jpg"><div class="zoom"><img src="images/service-06.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
           </div></div>
         </li>
       </ul>
@@ -941,11 +943,11 @@
       <!-- Большое фото справа: меняется при наведении на услугу (только на компьютере) -->
       <div class="svc-visual" aria-hidden="true">
         <div class="svc-shot is-active ph" data-file="service-01.jpg" style="--ph-a:#E9E3D7;--ph-b:#D0C8B8"><div class="zoom"><img src="images/service-01.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
-        <div class="svc-shot ph" data-file="service-02.jpg" style="--ph-a:#DEE1E8;--ph-b:#C6CBD8"><div class="zoom"><img src="service-02.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
-        <div class="svc-shot ph" data-file="service-03.jpg" style="--ph-a:#E8E2DA;--ph-b:#D1C8BC"><div class="zoom"><img src="service-03.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
-        <div class="svc-shot ph" data-file="service-04.jpg" style="--ph-a:#E3E2E0;--ph-b:#CBC9C5"><div class="zoom"><img src="service-04.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
-        <div class="svc-shot ph" data-file="service-05.jpg" style="--ph-a:#ECE5D9;--ph-b:#D6CAB4"><div class="zoom"><img src="service-05.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
-        <div class="svc-shot ph" data-file="service-06.jpg" style="--ph-a:#DFE3E6;--ph-b:#C7CDD2"><div class="zoom"><img src="service-06.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+        <div class="svc-shot ph" data-file="service-02.jpg" style="--ph-a:#DEE1E8;--ph-b:#C6CBD8"><div class="zoom"><img src="images/service-02.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+        <div class="svc-shot ph" data-file="service-03.jpg" style="--ph-a:#E8E2DA;--ph-b:#D1C8BC"><div class="zoom"><img src="images/service-03.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+        <div class="svc-shot ph" data-file="service-04.jpg" style="--ph-a:#E3E2E0;--ph-b:#CBC9C5"><div class="zoom"><img src="images/service-04.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+        <div class="svc-shot ph" data-file="service-05.jpg" style="--ph-a:#ECE5D9;--ph-b:#D6CAB4"><div class="zoom"><img src="images/service-05.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+        <div class="svc-shot ph" data-file="service-06.jpg" style="--ph-a:#DFE3E6;--ph-b:#C7CDD2"><div class="zoom"><img src="images/service-06.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
       </div>
     </div>
   </div>
@@ -956,11 +958,11 @@
   <div class="clinic-grid">
     <!-- REPLACE IMAGE: images/clinic-01.jpg (горизонтальное, 16:11, от 1800×1240) -->
     <div class="clinic-a ph unveil" data-file="clinic-01.jpg" data-parallax="0.08" style="--ph-a:#E4DED2;--ph-b:#CBC3B2">
-      <div class="zoom"><img src="clinic-01.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div>
+      <div class="zoom"><img src="images/clinic-01.jpg" alt="Интерьер стоматологической клиники" loading="lazy" onerror="imgFail(this)"></div>
     </div>
     <!-- REPLACE IMAGE: images/clinic-02.jpg (вертикальное, 4:5, от 1000×1250) -->
     <div class="clinic-b ph unveil" data-file="clinic-02.jpg" data-parallax="0.08" style="--d:.2s;--ph-a:#DDE0E7;--ph-b:#C5CAD6">
-      <div class="zoom"><img src="clinic-02.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div>
+      <div class="zoom"><img src="images/clinic-02.jpg" alt="Кабинет стоматологии" loading="lazy" onerror="imgFail(this)"></div>
     </div>
   </div>
 </section>
@@ -979,7 +981,7 @@
         <div class="doc-figure">
           <!-- REPLACE IMAGE: images/doctor-01.jpg (портрет 4:5, от 1000×1250) -->
           <div class="doc-photo ph unveil" data-file="doctor-01.jpg" style="--ph-a:#E9E4DB;--ph-b:#D3CCBF">
-            <div class="zoom"><img src="doctor-01.jpg" alt="Светлана Иванова" loading="lazy" onerror="imgFail(this)"></div>
+            <div class="zoom"><img src="images/doctor-01.jpg" alt="Светлана Иванова" loading="lazy" onerror="imgFail(this)"></div>
           </div>
           <span class="doc-badge">Стаж 18 лет</span>
           <p class="doc-bio">Врач высшей категории. Специализируется на сложных терапевтических случаях и лечении заболеваний дёсен. Ведёт некоторых пациентов более 15 лет.</p>
@@ -994,7 +996,7 @@
         <div class="doc-figure">
           <!-- REPLACE IMAGE: images/doctor-02.jpg -->
           <div class="doc-photo ph unveil" data-file="doctor-02.jpg" style="--d:.1s;--ph-a:#DDE0E8;--ph-b:#C8CCD8">
-            <div class="zoom"><img src="doctor-02.jpg" alt="Андрей Петров" loading="lazy" onerror="imgFail(this)"></div>
+            <div class="zoom"><img src="images/doctor-02.jpg" alt="Андрей Петров" loading="lazy" onerror="imgFail(this)"></div>
           </div>
           <span class="doc-badge">Стаж 14 лет</span>
           <p class="doc-bio">Кандидат медицинских наук. Более 2000 успешно установленных имплантов. Постоянный участник международных конгрессов по имплантологии.</p>
@@ -1009,7 +1011,7 @@
         <div class="doc-figure">
           <!-- REPLACE IMAGE: images/doctor-03.jpg -->
           <div class="doc-photo ph unveil" data-file="doctor-03.jpg" style="--d:.2s;--ph-a:#E4DFE3;--ph-b:#CFC9CF">
-            <div class="zoom"><img src="doctor-03.jpg" alt="Марина Соколова" loading="lazy" onerror="imgFail(this)"></div>
+            <div class="zoom"><img src="images/doctor-03.jpg" alt="Марина Соколова" loading="lazy" onerror="imgFail(this)"></div>
           </div>
           <span class="doc-badge">Стаж 11 лет</span>
           <p class="doc-bio">Специалист по протезированию и эстетической реставрации. Создаёт натуральные, гармоничные улыбки с учётом индивидуальных пожеланий пациента.</p>
@@ -1031,11 +1033,11 @@
     <!-- Фото пациентов слева: меняется вместе с отзывом -->
     <div class="rev-visual" aria-hidden="true">
       <!-- REPLACE IMAGE: images/review-01.jpg -->
-      <div class="rev-shot is-active ph" data-file="review-01.jpg" style="--ph-a:#E8E2D6;--ph-b:#CFC6B5"><div class="zoom"><img src="review-01.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+<div class="rev-shot is-active ph" data-file="review-01.jpg" style="--ph-a:#E8E2D6;--ph-b:#CFC6B5"><div class="zoom"><img src="images/review-01.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
       <!-- REPLACE IMAGE: images/review-02.jpg -->
-      <div class="rev-shot ph" data-file="review-02.jpg" style="--ph-a:#DDE0E8;--ph-b:#C6CBD8"><div class="zoom"><img src="review-02.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+<div class="rev-shot ph" data-file="review-02.jpg" style="--ph-a:#DDE0E8;--ph-b:#C6CBD8"><div class="zoom"><img src="images/review-02.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
       <!-- REPLACE IMAGE: images/review-03.jpg -->
-      <div class="rev-shot ph" data-file="review-03.jpg" style="--ph-a:#E6E0DC;--ph-b:#CFC7C1"><div class="zoom"><img src="review-03.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
+<div class="rev-shot ph" data-file="review-03.jpg" style="--ph-a:#E6E0DC;--ph-b:#CFC7C1"><div class="zoom"><img src="images/review-03.jpg" alt="" loading="lazy" onerror="imgFail(this)"></div></div>
     </div>
 
     <div class="rev-main">
